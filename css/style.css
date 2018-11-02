@@ -1,0 +1,16 @@
+/* Add your own CSS rules here */
+h1 {
+  text-align: center;
+}
+
+g[class='note'] {
+  color: red;
+}
+
+.highlighted {
+  fill: blue
+}
+
+#controls {
+  float: right;
+}
