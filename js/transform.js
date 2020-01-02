@@ -1,17 +1,4 @@
-document.getElementById('file').onchange = function(){
-  var x = this.files[0];
 
-  var reader = new FileReader();
-  reader.onload = function(progressEvent){
-    console.log(this.result);
-
-    var lines = this.result.split('\n');
-    for (var line = 0; line < syllables.length; line++){
-      console.log(lines[line]);
-    }
-  };
-  reader.readAsText(x);
-};
 
 
 /*function getText() {

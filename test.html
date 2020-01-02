@@ -6,6 +6,22 @@
     <script src="js/transform.js"></script>
   </head>
   <body>
-    <input type="file" name="file" id="file"> data/test-txt.txt</input>
+    <input type="file" name="file" id="file">
+    <script>
+      document.getElementById('file').onchange = function(){
+        var x = this.files[0];
+
+        var reader = new FileReader();
+        reader.onload = function(progressEvent){
+          console.log(this.result);
+
+          var lines = this.result.split('\n');
+          for (var line = 0; line < syllables.length; line++){
+            console.log(lines[line]);
+          }
+        };
+        reader.readAsText(x);
+      };
+    </script>
   </body>
 </html>
