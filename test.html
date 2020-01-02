@@ -16,8 +16,9 @@
           console.log(this.result);
 
           var lines = this.result.split('\n');
-          for (var line = 0; line < syllables.length; line++){
-            console.log(lines[line]);
+          let syllables = []
+          for (var line = 0; line < lines.length; line++){
+            syllables.push(lines[line])
           }
         };
         reader.readAsText(x);
